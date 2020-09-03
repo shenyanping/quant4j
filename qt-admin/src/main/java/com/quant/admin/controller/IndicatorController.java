@@ -104,9 +104,9 @@ public class IndicatorController extends BaseController {
                 boolean entered = tradingRecord.enter(endIndex, newBar.getClosePrice(), PrecisionNum.valueOf(10));
                 if (entered) {
                     Order entryOrder = tradingRecord.getLastEntry();
-                    System.out.println("Entered on " + entryOrder.getIndex()
-                            + " (price=" + entryOrder.getPricePerAsset().doubleValue()
-                            + ", amount=" + entryOrder.getAmount().doubleValue() + ")");
+//                    System.out.println("Entered on " + entryOrder.getIndex()
+//                            + " (price=" + entryOrder.getPricePerAsset().doubleValue()
+//                            + ", amount=" + entryOrder.getAmount().doubleValue() + ")");
                 }
             } else if (strategy.shouldExit(endIndex)) {
                 // Our strategy should exit
@@ -114,9 +114,9 @@ public class IndicatorController extends BaseController {
                 boolean exited = tradingRecord.exit(endIndex, newBar.getClosePrice(), PrecisionNum.valueOf(10));
                 if (exited) {
                     Order exitOrder = tradingRecord.getLastExit();
-                    System.out.println("Exited on " + exitOrder.getIndex()
-                            + " (price=" + exitOrder.getPricePerAsset().doubleValue()
-                            + ", amount=" + exitOrder.getAmount().doubleValue() + ")");
+//                    System.out.println("Exited on " + exitOrder.getIndex()
+//                            + " (price=" + exitOrder.getPricePerAsset().doubleValue()
+//                            + ", amount=" + exitOrder.getAmount().doubleValue() + ")");
                 }
 
 

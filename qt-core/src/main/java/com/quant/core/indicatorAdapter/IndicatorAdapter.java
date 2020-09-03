@@ -9,8 +9,8 @@ import org.ta4j.core.TimeSeries;
 import org.ta4j.core.indicators.*;
 import org.ta4j.core.indicators.adx.ADXIndicator;
 import org.ta4j.core.indicators.helpers.ClosePriceIndicator;
-import org.ta4j.core.indicators.helpers.HighPriceIndicator;
-import org.ta4j.core.indicators.helpers.LowPriceIndicator;
+//import org.ta4j.core.indicators.helpers.HighPriceIndicator;
+//import org.ta4j.core.indicators.helpers.LowPriceIndicator;
 import org.ta4j.core.indicators.helpers.OpenPriceIndicator;
 
 import static com.quant.common.constans.IndicatorCons.*;
@@ -127,9 +127,9 @@ public abstract class IndicatorAdapter {
         } else if (source.equals(OPEN)) {
             indicator = new OpenPriceIndicator(timeSeries);
         } else if (source.equals(LOW)) {
-            indicator = new LowPriceIndicator(timeSeries);
+//            indicator = new LowPriceIndicator(timeSeries);
         } else if (source.equals(HIGHT)) {
-            indicator = new HighPriceIndicator(timeSeries);
+//            indicator = new HighPriceIndicator(timeSeries);
         }
         return indicator;
     }
